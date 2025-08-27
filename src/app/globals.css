@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #0f0f23;
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0f0f23;
+  --color-card: #ffffff;
+  --color-card-foreground: #0f0f23;
+  --color-border: #e2e8f0;
+  --color-input: #e2e8f0;
+  --color-primary: #0f0f23;
+  --color-primary-foreground: #f8fafc;
+  --color-secondary: #f1f5f9;
+  --color-secondary-foreground: #0f0f23;
+  --color-accent: #f1f5f9;
+  --color-accent-foreground: #0f0f23;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #f8fafc;
+  --color-ring: #94a3b8;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --color-background: #0f0f23;
+  --color-foreground: #f8fafc;
+  --color-muted: #1e293b;
+  --color-muted-foreground: #94a3b8;
+  --color-popover: #0f0f23;
+  --color-popover-foreground: #f8fafc;
+  --color-card: #0f0f23;
+  --color-card-foreground: #f8fafc;
+  --color-border: #1e293b;
+  --color-input: #1e293b;
+  --color-primary: #f8fafc;
+  --color-primary-foreground: #0f0f23;
+  --color-secondary: #1e293b;
+  --color-secondary-foreground: #f8fafc;
+  --color-accent: #1e293b;
+  --color-accent-foreground: #f8fafc;
+  --color-destructive: #7f1d1d;
+  --color-destructive-foreground: #f8fafc;
+  --color-ring: #475569;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+}
+
+/* Hide Next.js error overlay portal */
+nextjs-portal {
+  display: none !important;
+}
